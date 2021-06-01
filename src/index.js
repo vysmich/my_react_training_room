@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.scss';
+import EntranceGate from './EntranceGate';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <EntranceGate />
   </React.StrictMode>,
   document.getElementById('root')
 );
