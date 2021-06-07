@@ -1,0 +1,23 @@
+@import "./normalize.scss";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+
+:root {
+  --first-color: #9dd3cc;
+  --second-color: #db7c7b;
+  --thirth-color: #65dbcc;
+  --fourth-color: #dba24f;
+  --fifth-color: #5adb81;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--first-color);
+
+  background-size: contain;
+  background-position-x: left;
+  background-position-y: bottom;
+  color: black;
+}
