@@ -15,12 +15,13 @@ import ChatApp from "../pages/ChatApp";
 import BlogApp from "../pages/BlogApp";
 import EshopApp from "../pages/EshopApp";
 import SpotifyApp from "../pages/SpotifyApp";
+import "./NavBar.scss";
 
 const NavBar = () => {
   return (
     <Router>
       <div>
-        <nav>
+        <nav className="nav-bar">
           <ul>
             <li>
               <Link to="/CalculatorApp">Calculator</Link>
