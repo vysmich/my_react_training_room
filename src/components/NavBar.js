@@ -15,6 +15,7 @@ import ChatApp from "../pages/ChatApp";
 import BlogApp from "../pages/BlogApp";
 import EshopApp from "../pages/EshopApp";
 import SpotifyApp from "../pages/SpotifyApp";
+import HomePage from "../pages/HomePage";
 import "./NavBar.scss";
 
 const NavBar = () => {
@@ -23,6 +24,9 @@ const NavBar = () => {
       <div>
         <nav className="nav-bar">
           <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>
               <Link to="/CalculatorApp">Calculator</Link>
             </li>
@@ -57,6 +61,9 @@ const NavBar = () => {
         </nav>
 
         <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
           <Route path="/ToDoApp">
             <ToDoApp />
           </Route>
