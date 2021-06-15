@@ -1,13 +1,15 @@
 import React from "react";
 import "./CalculatorApp.scss";
+import Screen from "../components/CalculatorApp/Screen";
 
 const CalculatorApp = () => {
   return (
-    <div className="calculator">
-      <div className="container">
-        <h1>In progress....</h1>
+    <main className="container">
+      <h1>Calulator</h1>
+      <div className="calculator">
+        <Screen></Screen>
       </div>
-    </div>
+    </main>
   );
 };
 
