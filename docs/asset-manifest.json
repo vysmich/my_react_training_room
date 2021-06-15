@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/my_react_training_room/static/css/main.51b1de6d.chunk.css",
-    "main.js": "/my_react_training_room/static/js/main.b16f2277.chunk.js",
-    "main.js.map": "/my_react_training_room/static/js/main.b16f2277.chunk.js.map",
+    "main.css": "/my_react_training_room/static/css/main.430e4583.chunk.css",
+    "main.js": "/my_react_training_room/static/js/main.6f302d74.chunk.js",
+    "main.js.map": "/my_react_training_room/static/js/main.6f302d74.chunk.js.map",
     "runtime-main.js": "/my_react_training_room/static/js/runtime-main.9860be30.js",
     "runtime-main.js.map": "/my_react_training_room/static/js/runtime-main.9860be30.js.map",
     "static/js/2.b79e7cdb.chunk.js": "/my_react_training_room/static/js/2.b79e7cdb.chunk.js",
     "static/js/2.b79e7cdb.chunk.js.map": "/my_react_training_room/static/js/2.b79e7cdb.chunk.js.map",
     "index.html": "/my_react_training_room/index.html",
-    "static/css/main.51b1de6d.chunk.css.map": "/my_react_training_room/static/css/main.51b1de6d.chunk.css.map",
-    "static/js/2.b79e7cdb.chunk.js.LICENSE.txt": "/my_react_training_room/static/js/2.b79e7cdb.chunk.js.LICENSE.txt"
+    "static/css/main.430e4583.chunk.css.map": "/my_react_training_room/static/css/main.430e4583.chunk.css.map",
+    "static/js/2.b79e7cdb.chunk.js.LICENSE.txt": "/my_react_training_room/static/js/2.b79e7cdb.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/my_react_training_room/static/media/italy-4587336_1920.da3cbcba.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9860be30.js",
     "static/js/2.b79e7cdb.chunk.js",
-    "static/css/main.51b1de6d.chunk.css",
-    "static/js/main.b16f2277.chunk.js"
+    "static/css/main.430e4583.chunk.css",
+    "static/js/main.6f302d74.chunk.js"
   ]
 }

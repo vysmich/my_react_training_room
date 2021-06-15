@@ -1,7 +1,10 @@
 .nav-bar {
-  max-width: 1200px;
+  padding: 0.7em 0;
+  font-size: 1em;
+  font-weight: 600;
   ul {
-    margin: 0, auto;
+    text-align: right;
+    margin-right: 2em;
   }
   li {
     display: inline-block;
