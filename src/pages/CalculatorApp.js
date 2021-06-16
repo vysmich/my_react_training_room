@@ -1,6 +1,7 @@
 import React from "react";
 import "./CalculatorApp.scss";
-import Screen from "../components/CalculatorApp/Screen";
+import Screen from "../components/CalculatorApp/Screen/Screen";
+import KeyPad from "../components/CalculatorApp/KeyPad/KeyPad";
 
 const CalculatorApp = () => {
   return (
@@ -8,6 +9,7 @@ const CalculatorApp = () => {
       <h1>Calulator</h1>
       <div className="calculator">
         <Screen></Screen>
+        <KeyPad />
       </div>
     </main>
   );
