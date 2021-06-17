@@ -7,7 +7,11 @@ const ButtonCalc = (props) => {
     classes.push("btn--" + props.type);
   }
 
-  return <button className={classes.join(" ")}>{props.children}</button>;
+  return (
+    <button className={classes.join(" ")} onClick={props.onButtonPress}>
+      {props.children}
+    </button>
+  );
 };
 
 export default ButtonCalc;
