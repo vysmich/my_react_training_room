@@ -1,8 +1,8 @@
 import React from "react";
 import "./ResultScreen.scss";
 
-const ResultScreen = () => {
-  return <div className="result-screen">3124 </div>;
+const ResultScreen = (props) => {
+  return <div className="result-screen">{props.children}</div>;
 };
 
 export default ResultScreen;

@@ -3,11 +3,11 @@ import "./Screen.scss";
 import ResultScreen from "./ResultScreen/ResultScreen";
 import ComputationScreen from "./ComputationScreen/ComputationScreen";
 
-const Screen = () => {
+const Screen = (props) => {
   return (
     <section className="screen">
-      <ResultScreen />
-      <ComputationScreen />
+      <ResultScreen>{props.result}</ResultScreen>
+      <ComputationScreen>{props.equation}</ComputationScreen>
     </section>
   );
 };
