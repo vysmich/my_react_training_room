@@ -33,7 +33,7 @@ class CalculatorApp extends React.Component {
         alert("Invalid Matematical Equation");
       }
     } else {
-      equation = equation.trim;
+      equation = equation.trim();
       equation = equation.substr(0, equation.length - 1);
     }
     this.setState({ equation: equation });
