@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   NavLink as Link,
@@ -31,10 +31,10 @@ const NavBar = () => {
               <Link to="/CalculatorApp">Calculator</Link>
             </li>
             <li>
-              <Link to="/ToDoApp">To do</Link>
+              <Link to="/WeatherApp">Actual weather</Link>
             </li>
             <li>
-              <Link to="/WeatherApp">Actual weather</Link>
+              <Link to="/ToDoApp">To do</Link>
             </li>
             <li>
               <Link to="/CryptoApp">Cryptocurrency rates</Link>
