@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vysmich.github.io/my_react_training_room/static/css/main.e198091e.chunk.css",
-    "main.js": "/vysmich.github.io/my_react_training_room/static/js/main.061c2f6e.chunk.js",
-    "main.js.map": "/vysmich.github.io/my_react_training_room/static/js/main.061c2f6e.chunk.js.map",
+    "main.js": "/vysmich.github.io/my_react_training_room/static/js/main.c213d732.chunk.js",
+    "main.js.map": "/vysmich.github.io/my_react_training_room/static/js/main.c213d732.chunk.js.map",
     "runtime-main.js": "/vysmich.github.io/my_react_training_room/static/js/runtime-main.9b47d474.js",
     "runtime-main.js.map": "/vysmich.github.io/my_react_training_room/static/js/runtime-main.9b47d474.js.map",
     "static/js/2.e6fc7b13.chunk.js": "/vysmich.github.io/my_react_training_room/static/js/2.e6fc7b13.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.9b47d474.js",
     "static/js/2.e6fc7b13.chunk.js",
     "static/css/main.e198091e.chunk.css",
-    "static/js/main.061c2f6e.chunk.js"
+    "static/js/main.c213d732.chunk.js"
   ]
 }
