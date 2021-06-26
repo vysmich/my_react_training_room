@@ -1,4 +1,5 @@
 @import "./normalize.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 :root {
   --color-white: #fff;
@@ -13,7 +14,7 @@
   --shadow: rgba(0, 0, 0, 0.4);
 }
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
