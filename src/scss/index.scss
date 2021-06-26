@@ -19,15 +19,24 @@ body {
   height: 100vh;
 
   background-image: url(../img/italy-4587336_1920.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 h1 {
   text-align: center;
-  // padding: 0.6em 0;
+  font-size: clamp(1.3em, 7vw, 3em);
+}
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 .container {
-  max-width: 1200px;
+  max-width: 300px;
   margin: 0 auto;
+  padding: 0 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -35,4 +44,47 @@ h1 {
 }
 p {
   text-align: center;
+  font-size: clamp(1em, 5vw, 2em);
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .container {
+    max-width: 500px;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .container {
+    max-width: 940px;
+  }
+}
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1150px;
+  }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    h1 {
+      font-size: clamp(1.3em, 5vw, 3em);
+    }
+    p {
+      text-align: center;
+      font-size: clamp(1em, 3vw, 2em);
+    }
+  }
 }
