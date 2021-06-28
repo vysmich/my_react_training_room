@@ -13,11 +13,22 @@
 
   --shadow: rgba(0, 0, 0, 0.4);
 }
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  max-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
 
   background-image: url(../img/italy-4587336_1920.jpg);
   background-repeat: no-repeat;
@@ -28,7 +39,6 @@ h1 {
   font-size: clamp(1.3em, 7vw, 4em);
 }
 main {
-  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -88,5 +98,11 @@ p {
       text-align: center;
       font-size: clamp(1em, 3vw, 2em);
     }
+  }
+}
+
+@media (min-width: 55em) {
+  main {
+    margin-top: 6em;
   }
 }

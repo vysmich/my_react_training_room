@@ -35,19 +35,19 @@ const NavBar = () => {
               <Link to="/CalculatorApp">Calculator</Link>
             </li>
             <li>
-              <Link to="/WeatherApp">Actual weather</Link>
+              <Link to="/WeatherApp">Weather</Link>
             </li>
             <li>
               <Link to="/ToDoApp">To do</Link>
             </li>
             <li>
-              <Link to="/CryptoApp">Cryptocurrency rates</Link>
+              <Link to="/CryptoApp">Crypto</Link>
             </li>
             <li>
               <Link to="/SpotifyApp">Spotify</Link>
             </li>
             <li>
-              <Link to="/SocialApp">Social Network</Link>
+              <Link to="/SocialApp">Social</Link>
             </li>
             <li>
               <Link to="/EshopApp">Eshop</Link>

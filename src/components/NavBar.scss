@@ -1,16 +1,16 @@
 .header {
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   z-index: 3;
+  overflow: hidden;
 
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow: scroll;
     background-color: white;
   }
 
@@ -87,6 +87,8 @@
 
   .menu-btn:checked ~ .menu {
     max-height: 600px;
+    min-height: 100%;
+    overflow-y: auto;
   }
 
   .menu-btn:checked ~ .menu-icon .navicon {
@@ -106,16 +108,18 @@
     top: 0;
   }
 
-  @media (min-width: 69em) {
+  @media (min-width: 55em) {
     ul {
       background-color: transparent;
+      margin: 1.5em 2.5em;
+      overflow: hidden;
     }
     li {
       float: left;
     }
     li a {
       padding: 15px 8px;
-      font-size: clamp(0.5em, 1.5vw, 2em);
+      font-size: clamp(1em, 1.4vw, 1.8em);
     }
     .menu {
       clear: none;
