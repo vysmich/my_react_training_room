@@ -21,44 +21,49 @@ import "./NavBar.scss";
 const NavBar = () => {
   return (
     <Router>
-      <nav className="nav-bar">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/CalculatorApp">Calculator</Link>
-          </li>
-          <li>
-            <Link to="/WeatherApp">Actual weather</Link>
-          </li>
-          <li>
-            <Link to="/ToDoApp">To do</Link>
-          </li>
-          <li>
-            <Link to="/CryptoApp">Cryptocurrency rates</Link>
-          </li>
-          <li>
-            <Link to="/SpotifyApp">Spotify</Link>
-          </li>
-          <li>
-            <Link to="/SocialApp">Social Network</Link>
-          </li>
-          <li>
-            <Link to="/EshopApp">Eshop</Link>
-          </li>
-          <li>
-            <Link to="/DasboardApp">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/ChatApp">Chat</Link>
-          </li>
-          <li>
-            <Link to="/BlogApp">Blog</Link>
-          </li>
-        </ul>
-      </nav>
-
+      <header className="header">
+        <nav className="nav-bar">
+          <input className="menu-btn" type="checkbox" id="menu-btn" />
+          <label className="menu-icon" htmlFor="menu-btn">
+            <span className="navicon"></span>
+          </label>
+          <ul className="menu">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/CalculatorApp">Calculator</Link>
+            </li>
+            <li>
+              <Link to="/WeatherApp">Actual weather</Link>
+            </li>
+            <li>
+              <Link to="/ToDoApp">To do</Link>
+            </li>
+            <li>
+              <Link to="/CryptoApp">Cryptocurrency rates</Link>
+            </li>
+            <li>
+              <Link to="/SpotifyApp">Spotify</Link>
+            </li>
+            <li>
+              <Link to="/SocialApp">Social Network</Link>
+            </li>
+            <li>
+              <Link to="/EshopApp">Eshop</Link>
+            </li>
+            <li>
+              <Link to="/DasboardApp">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/ChatApp">Chat</Link>
+            </li>
+            <li>
+              <Link to="/BlogApp">Blog</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <Switch>
         <Route path="/" exact>
           <HomePage />
