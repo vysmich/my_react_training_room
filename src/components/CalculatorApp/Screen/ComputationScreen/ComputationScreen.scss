@@ -5,3 +5,8 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
+@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 680px) {
+  .computation-screen {
+    font-size: 1rem;
+  }
+}

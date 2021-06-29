@@ -1,8 +1,13 @@
 .result-screen {
-  height: 19vh;
-  font-size: 4rem;
+  height: 13vh;
+  font-size: 3rem;
   font-weight: 800;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 850px) {
+  .result-screen {
+    font-size: 1.7rem;
+  }
 }
