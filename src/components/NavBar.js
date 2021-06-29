@@ -29,7 +29,9 @@ const NavBar = () => {
           </label>
           <ul className="menu">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" exact>
+                Home
+              </Link>
             </li>
             <li>
               <Link to="/CalculatorApp">Calculator</Link>
@@ -65,7 +67,7 @@ const NavBar = () => {
         </nav>
       </header>
       <Switch>
-        <Route path="/" exact>
+        <Route exact path="/">
           <HomePage />
         </Route>
         <Route path="/ToDoApp">
