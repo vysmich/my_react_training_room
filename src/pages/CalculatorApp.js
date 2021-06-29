@@ -43,11 +43,13 @@ class CalculatorApp extends React.Component {
   }
   render() {
     return (
-      <main className="container">
-        <h1>Calculator</h1>
-        <div className="calculator">
-          <Screen equation={this.state.equation} result={this.state.result} />
-          <KeyPad onButtonPress={this.onButtonPress} />
+      <main>
+        <div className="container">
+          <h1>Calculator</h1>
+          <div className="calculator">
+            <Screen equation={this.state.equation} result={this.state.result} />
+            <KeyPad onButtonPress={this.onButtonPress} />
+          </div>
         </div>
       </main>
     );

@@ -2,9 +2,11 @@ import React from "react";
 
 const CryptoApp = () => {
   return (
-    <div>
-      <h1>In progress....</h1>
-    </div>
+    <main>
+      <div className="container">
+        <h1>Cryptocurency rates</h1>
+      </div>
+    </main>
   );
 };
 

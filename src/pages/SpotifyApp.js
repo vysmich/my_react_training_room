@@ -2,9 +2,11 @@ import React from "react";
 
 const SpotifyApp = () => {
   return (
-    <div>
-      <h1>In progress....</h1>
-    </div>
+    <main>
+      <div className="container">
+        <h1>Spotify</h1>
+      </div>
+    </main>
   );
 };
 

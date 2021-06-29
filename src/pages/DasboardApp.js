@@ -2,9 +2,11 @@ import React from "react";
 
 const DasboardApp = () => {
   return (
-    <div>
-      <h1>In progress....</h1>
-    </div>
+    <main>
+      <div className="container">
+        <h1>Dashboard</h1>
+      </div>
+    </main>
   );
 };
 
