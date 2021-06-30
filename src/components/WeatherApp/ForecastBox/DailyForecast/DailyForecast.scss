@@ -1,0 +1,12 @@
+.daily-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  margin-left: 2em;
+  border-radius: 5px;
+
+  img {
+    max-width: 70%;
+  }
+}
