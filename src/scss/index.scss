@@ -113,7 +113,9 @@ p {
   }
 }
 @media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 850px) {
-  body {
+  body,
+  html {
+    overflow: scroll;
     h1 {
       font-size: clamp(1.3em, 3.4vw, 3em);
       margin-bottom: 0;
