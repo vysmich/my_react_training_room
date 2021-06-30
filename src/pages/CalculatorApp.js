@@ -12,6 +12,7 @@ class CalculatorApp extends React.Component {
   onButtonPress = (event) => {
     let equation = this.state.equation;
     const pressedButton = event.target.innerHTML;
+    const operators = ["+", "-", "*", "/", "%"];
 
     if (pressedButton === "C") return this.clear();
     else if (
@@ -19,7 +20,10 @@ class CalculatorApp extends React.Component {
       pressedButton === "."
     ) {
       equation += pressedButton;
-    } else if (["+", "-", "*", "/", "%"].indexOf(pressedButton) !== -1) {
+    } else if (
+      operators.indexOf(pressedButton) !== -1 &&
+      !operators.includes(equation.slice(-2, -1))
+    ) {
       equation += " " + pressedButton + " ";
     } else if (pressedButton === "=") {
       try {
