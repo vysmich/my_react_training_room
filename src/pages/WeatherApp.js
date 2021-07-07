@@ -13,6 +13,8 @@ const WeatherApp = () => {
   // filter for get actual weather from API
   const filterActualData = ({ location, current }) => {
     return {
+      country: location.country,
+      region: location.region,
       location: location.name,
       currentTemp: current.temp_c,
       currentWind: current.wind_kph,
@@ -38,16 +40,20 @@ const WeatherApp = () => {
 
   // function for api request and set state
   const handleSearch = (query) => {
-    fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=0a7c1ff2372040d5829153426213006&q=${query}&days=4&aqi=no&alerts=no`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        let actualData = filterActualData(data);
-        let forecastData = filterForecastData(data);
-        setactualWeather(actualData);
-        setForecasts(forecastData);
-      });
+    if (query && query.length > 2) {
+      fetch(
+        `http://api.weatherapi.com/v1/forecast.json?key=0a7c1ff2372040d5829153426213006&q=${encodeURI(
+          query
+        )}&days=4&aqi=no&alerts=no`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          let actualData = filterActualData(data);
+          let forecastData = filterForecastData(data);
+          setactualWeather(actualData);
+          setForecasts(forecastData);
+        });
+    }
   };
 
   //JSX
@@ -56,7 +62,7 @@ const WeatherApp = () => {
       <div className="container">
         <h1>Weather</h1>
         <SearchBox onSearch={handleSearch} />
-        <ForecastBox forecasts={forecasts} />
+        <ForecastBox forecasts={forecasts} actualWeather={actualWeather} />
         <p></p>
       </div>
     </main>
