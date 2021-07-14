@@ -3,15 +3,16 @@ import "./ForecastBox.scss";
 
 import DailyForecast from "./DailyForecast/DailyForecast";
 
-const ForecastBox = () => {
+const ForecastBox = (props) => {
+  const dailyData = props.forecasts;
   return (
-    <div className="forecast-box">
-      <DailyForecast />
-      <DailyForecast />
-      <DailyForecast />
-      <DailyForecast />
-      <DailyForecast />
-    </div>
+    <ul className="forecast-box">
+      {dailyData.map((day) => (
+        <li>
+          <DailyForecast data={day} />
+        </li>
+      ))}
+    </ul>
   );
 };
 

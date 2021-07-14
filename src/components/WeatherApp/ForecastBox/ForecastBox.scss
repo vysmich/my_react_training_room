@@ -1,5 +1,11 @@
 .forecast-box {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
   margin-top: 2em;
+  padding: 0;
+  li {
+    list-style: none;
+  }
 }

@@ -2,15 +2,23 @@ import React from "react";
 import "./DailyForecast.scss";
 import weather from "../../../../img/weather.png";
 
-const DailyForecast = () => {
+const DailyForecast = (props) => {
+  const data = props.data;
+  console.log(data);
   return (
-    <div className="daily-forecast">
-      <h2>Day: Monday</h2>
-      <img src={weather} alt="" />
-      <p>Weather: Sun</p>
-      <p>Temperture: 29°C</p>
-      <p>Wind speed</p>
-    </div>
+    <ul className="daily-forecast">
+      <li>{data.day}</li>
+      <li>
+        {" "}
+        <img src={data.icon} alt="" />
+      </li>
+
+      <li>
+        {data.maxTemp} °C/{data.minTemp} °C
+      </li>
+      <li> {data.maxWind} km/h</li>
+      <li> {data.chanceOfRain} %</li>
+    </ul>
   );
 };
 
