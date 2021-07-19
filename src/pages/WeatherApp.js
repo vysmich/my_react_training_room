@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //SCSS
 import "./WeatherApp.scss";
 //Components
@@ -59,13 +59,20 @@ const WeatherApp = () => {
           let forecastData = filterForecastData(data);
           setactualWeather(actualData);
           setForecasts(forecastData);
+        })
+        .catch((error) => {
+          alert("City not found");
         });
     }
   };
 
+  useEffect(() => {
+    handleSearch("Brno");
+  }, []);
+
   //JSX
   return (
-    <main>
+    <main className="weather-app">
       <div className="container">
         <h1>Weather</h1>
         <SearchBox onSearch={handleSearch} />

@@ -3,7 +3,11 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  margin-top: 2em;
+  width: 100%;
+  li:nth-child(2) {
+    margin: 0 2rem;
+  }
+
   padding: 0;
   li {
     list-style: none;

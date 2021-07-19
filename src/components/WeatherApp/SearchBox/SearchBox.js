@@ -20,7 +20,13 @@ const SearchBox = (props) => {
   return (
     <div className="search-box">
       <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="text" ref={searchInput} />
+        <input
+          autoFocus
+          onChange={handleChange}
+          type="text"
+          ref={searchInput}
+          placeholder="Enter your city"
+        />
       </form>
     </div>
   );

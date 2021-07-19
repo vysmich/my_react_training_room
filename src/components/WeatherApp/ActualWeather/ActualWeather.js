@@ -3,21 +3,28 @@ import "./ActualWeather.scss";
 
 const ActualWeather = (props) => {
   const actualData = props.actualWeather;
-  console.log(actualData);
-  return (
-    <ul className="actual-weather">
-      <li>Actual</li>
-      <li>{actualData.country}</li>
-      <li>{actualData.location}</li>
-      <li>
-        {" "}
-        <img src={actualData.forecastImg} alt="" />
-      </li>
+  console.log(actualData.length);
+  if (actualData.currentTemp) {
+    return (
+      <div className="actual-weather">
+        <h2>
+          Current weather in {actualData.location} <br />
+          <span>({actualData.country})</span>{" "}
+        </h2>
+        <article>
+          <p>
+            {" "}
+            <img src={actualData.forecastImg} alt="" />
+          </p>
 
-      <li>{actualData.currentTemp}°C</li>
-      <li>{actualData.currentWind} km/h</li>
-    </ul>
-  );
+          <p>{actualData.currentTemp}°C</p>
+          <p>{actualData.currentWind} km/h</p>
+        </article>
+      </div>
+    );
+  } else {
+    return <div></div>;
+  }
 };
 
 export default ActualWeather;

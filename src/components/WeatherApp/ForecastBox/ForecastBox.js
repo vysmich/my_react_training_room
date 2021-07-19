@@ -8,7 +8,7 @@ const ForecastBox = (props) => {
   return (
     <ul className="forecast-box">
       {dailyData.map((day) => (
-        <li>
+        <li id={day.date}>
           <DailyForecast data={day} />
         </li>
       ))}

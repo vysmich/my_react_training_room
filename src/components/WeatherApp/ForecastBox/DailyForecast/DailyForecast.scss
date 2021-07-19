@@ -5,14 +5,12 @@
   flex-grow: 1;
   background-color: rgba($color: #000, $alpha: 0.6);
   color: var(--color-white);
-  margin: 2rem;
+
   border-radius: 5px;
-  padding: 2rem;
-  img {
-    max-width: 70%;
-  }
+  padding: 1rem;
 
   li {
     list-style: none;
+    font-size: clamp(1em, 2.6vw, 2em);
   }
 }

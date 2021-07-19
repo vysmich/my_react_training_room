@@ -4,21 +4,21 @@ import weather from "../../../../img/weather.png";
 
 const DailyForecast = (props) => {
   const data = props.data;
-  console.log(data);
+
   return (
-    <ul className="daily-forecast">
-      <li>{data.day}</li>
-      <li>
+    <div className="daily-forecast">
+      <p>{data.day}</p>
+      <p>
         {" "}
         <img src={data.icon} alt="" />
-      </li>
+      </p>
 
-      <li>
+      <p>
         {data.maxTemp} °C/{data.minTemp} °C
-      </li>
-      <li> {data.maxWind} km/h</li>
-      <li> {data.chanceOfRain} %</li>
-    </ul>
+      </p>
+      <p> {data.maxWind} km/h</p>
+      <p> {data.chanceOfRain} %</p>
+    </div>
   );
 };
 
