@@ -49,7 +49,7 @@ const WeatherApp = () => {
   const handleSearch = (query) => {
     if (query && query.length > 2) {
       fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=0a7c1ff2372040d5829153426213006&q=${encodeURI(
+        `https://api.weatherapi.com/v1/forecast.json?key=0a7c1ff2372040d5829153426213006&q=${encodeURI(
           query
         )}&days=4&aqi=no&alerts=no`
       )

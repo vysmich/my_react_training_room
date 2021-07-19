@@ -1,9 +1,10 @@
 import React from "react";
 import "./ActualWeather.scss";
+import Wind from "../../../img/wind.svg";
+import Temperature from "../../../img/thermometer.svg";
 
 const ActualWeather = (props) => {
   const actualData = props.actualWeather;
-  console.log(actualData.length);
   if (actualData.currentTemp) {
     return (
       <div className="actual-weather">
@@ -17,8 +18,18 @@ const ActualWeather = (props) => {
             <img src={actualData.forecastImg} alt="" />
           </p>
 
-          <p>{actualData.currentTemp}°C</p>
-          <p>{actualData.currentWind} km/h</p>
+          <p>
+            <img
+              src={Temperature}
+              alt="Temperature icon"
+              className="svg-icon"
+            />
+            {actualData.currentTemp}°C
+          </p>
+          <p>
+            <img src={Wind} alt="Wind icon" className="svg-icon" />
+            {actualData.currentWind} km/h
+          </p>
         </article>
       </div>
     );
