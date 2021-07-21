@@ -10,6 +10,7 @@ const WeatherApp = () => {
   //State
   const [actualWeather, setactualWeather] = useState([]);
   const [forecasts, setForecasts] = useState([]);
+  const [showHourlyForecast, setshowHourlyForecast] = useState(false);
 
   // filter for get actual weather from API
   const filterActualData = ({ location, current }) => {
@@ -22,18 +23,13 @@ const WeatherApp = () => {
       forecastImg: current.condition.icon,
     };
   };
-  // get day name from date
-  const dayFromDate = (date) => {
-    const day = new Date(date);
-    const options = { weekday: "long" };
-    return new Intl.DateTimeFormat("en-US", options).format(day);
-  };
+
   // filter for get forecast from API
   const filterForecastData = ({ forecast }) => {
     let daysforecast = [];
     forecast.forecastday.map((days) => {
       daysforecast.push({
-        day: dayFromDate(days.date),
+        day: days.date,
         date: days.date,
         icon: days.day.condition.icon,
         maxTemp: days.day.maxtemp_c.toFixed(0),
@@ -49,9 +45,7 @@ const WeatherApp = () => {
   const handleSearch = (query) => {
     if (query && query.length > 2) {
       fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=0a7c1ff2372040d5829153426213006&q=${encodeURI(
-          query
-        )}&days=4&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=0a7c1ff2372040d5829153426213006&&q=${query}&days=10&aqi=no&alerts=no`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -77,7 +71,11 @@ const WeatherApp = () => {
         <h1>Weather</h1>
         <SearchBox onSearch={handleSearch} />
         <ActualWeather actualWeather={actualWeather} />
-        <ForecastBox forecasts={forecasts} />
+        <ForecastBox
+          forecasts={forecasts}
+          showHourlyForecast={showHourlyForecast}
+          setshowHourlyForecast={setshowHourlyForecast}
+        />
         <p></p>
       </div>
     </main>
