@@ -7,10 +7,14 @@ import ForecastBox from "../components/WeatherApp/ForecastBox/ForecastBox";
 import ActualWeather from "../components/WeatherApp/ActualWeather/ActualWeather";
 
 const WeatherApp = () => {
-  //State
+  //--------State
+  // Api data
   const [actualWeather, setactualWeather] = useState([]);
   const [forecasts, setForecasts] = useState([]);
+  // modal state
   const [showHourlyForecast, setshowHourlyForecast] = useState(false);
+  // Hourly forecast carousel state
+  const [activeIndex, setactiveIndex] = useState(1);
 
   // filter for get actual weather from API
   const filterActualData = ({ location, current }) => {

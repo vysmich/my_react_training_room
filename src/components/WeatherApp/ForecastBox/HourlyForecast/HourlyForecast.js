@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
+import HourlyCarusel from "./HourlyCarusel/HourlyCarusel";
 import "./HourlyForecast.scss";
 
 const HourlyForecast = (props) => {
@@ -29,9 +30,7 @@ const HourlyForecast = (props) => {
             event.stopPropagation();
           }}
         >
-          <p>12:00</p>
-          <p>13:00</p>
-          <p>14:00</p>
+          <HourlyCarusel />
         </div>
       </div>,
       document.getElementById("portal")
