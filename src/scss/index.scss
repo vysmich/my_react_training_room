@@ -69,6 +69,9 @@ p {
   text-align: center;
   font-size: clamp(1em, 5vw, 3em);
 }
+button {
+  cursor: pointer;
+}
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .container {

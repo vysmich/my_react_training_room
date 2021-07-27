@@ -24,15 +24,19 @@ const HourlyCarusel = (props) => {
 
       <div className="indicators">
         <button
+          className="btn-left"
           onClick={() => {
-            setactiveIndex(activeIndex - 0.1);
+            activeIndex <= 0.3
+              ? setactiveIndex(0)
+              : setactiveIndex(activeIndex - 0.3);
           }}
         >
           &lt;
         </button>
         <button
+          className="btn-right"
           onClick={() => {
-            setactiveIndex(activeIndex + 0.1);
+            setactiveIndex(activeIndex + 0.3);
           }}
         >
           &gt;

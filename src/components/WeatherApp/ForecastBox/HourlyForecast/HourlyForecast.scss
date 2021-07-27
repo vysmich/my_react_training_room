@@ -14,8 +14,14 @@
     // background-color: var(--color-black-transparent2);
   }
   .close-btn {
+    font-family: monospace;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2%;
+    right: 2%;
+    color: var(--color-white);
+    background-color: transparent;
+    border: none;
+
+    font-size: clamp(1.8rem, 4vw, 4rem);
   }
 }

@@ -6,4 +6,26 @@
     display: flex;
     transition: 0.2s ease-in-out;
   }
+  .indicators {
+    position: relative;
+    button {
+      color: var(--color-white);
+      background-color: transparent;
+      border: none;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(1.8rem, 4vw, 4rem);
+      margin: 0;
+      padding: 1%;
+      border-radius: 50%;
+
+      &.btn-right {
+        right: 3%;
+      }
+      &.btn-left {
+        left: 3%;
+      }
+    }
+  }
 }

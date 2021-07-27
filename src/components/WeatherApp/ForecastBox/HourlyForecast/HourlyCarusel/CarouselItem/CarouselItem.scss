@@ -1,15 +1,16 @@
 .carousel-item {
-  margin-left: 2rem;
   white-space: nowrap;
+  padding: 0.5rem;
+  margin: 0.5rem;
   p {
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 1.8vw, 2rem);
     margin: 0.5rem;
   }
   img {
     max-width: 80%;
   }
   .svg-icon {
-    max-width: 42%;
+    max-width: 30%;
     margin-right: 0.4rem;
   }
 }
