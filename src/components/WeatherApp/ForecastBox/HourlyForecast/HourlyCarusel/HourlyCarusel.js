@@ -3,6 +3,12 @@ import "./HourlyCarusel.scss";
 import CarouselItem from "./CarouselItem/CarouselItem";
 
 const HourlyCarusel = (props) => {
+  const forecast = props.forecast;
+  // Filters the forecast data by pressing the button in DailyForecast component
+  const hourlyData = forecast.filter(
+    (date) => date.day === props.showHourlyForecast[1]
+  )[0].hourly;
+
   // Hourly forecast carousel state
   const [activeIndex, setactiveIndex] = useState(0);
   return (
@@ -11,21 +17,11 @@ const HourlyCarusel = (props) => {
         className="inner"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-
-        <CarouselItem />
-
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
+        {hourlyData.map((hour) => {
+          return <CarouselItem hour={hour} />;
+        })}
       </div>
+
       <div className="indicators">
         <button
           onClick={() => {

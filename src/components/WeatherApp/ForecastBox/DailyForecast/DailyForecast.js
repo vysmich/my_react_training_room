@@ -3,7 +3,6 @@ import "./DailyForecast.scss";
 import Wind from "../../../../img/wind.svg";
 import Temperature from "../../../../img/thermometer.svg";
 import Rain from "../../../../img/raining.svg";
-import HourlyForecast from "../HourlyForecast/HourlyForecast";
 
 const DailyForecast = (props) => {
   const data = props.data;
@@ -14,7 +13,7 @@ const DailyForecast = (props) => {
     const options = { weekday: "long" };
     return new Intl.DateTimeFormat("en-US", options).format(day);
   };
-  const showModal = props.showHourlyForecast;
+
   return (
     <div className="daily-forecast">
       <p>{dayFromDate(data.day)}</p>
@@ -35,14 +34,9 @@ const DailyForecast = (props) => {
         <img src={Rain} alt="Rain icon" className="svg-icon" />
         {data.chanceOfRain} %
       </p>
-      <button onClick={() => props.setshowHourlyForecast(true)}>
+      <button onClick={() => props.setshowHourlyForecast([true, data.day])}>
         Hourly forecast
       </button>
-
-      <HourlyForecast
-        show={showModal}
-        setshowHourlyForecast={props.setshowHourlyForecast}
-      />
     </div>
   );
 };

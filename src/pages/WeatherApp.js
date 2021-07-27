@@ -5,16 +5,14 @@ import "./WeatherApp.scss";
 import SearchBox from "../components/WeatherApp/SearchBox/SearchBox";
 import ForecastBox from "../components/WeatherApp/ForecastBox/ForecastBox";
 import ActualWeather from "../components/WeatherApp/ActualWeather/ActualWeather";
-
+import HourlyForecast from "../components/WeatherApp/ForecastBox/HourlyForecast/HourlyForecast";
 const WeatherApp = () => {
   //--------State
   // Api data
   const [actualWeather, setactualWeather] = useState([]);
   const [forecasts, setForecasts] = useState([]);
   // modal state
-  const [showHourlyForecast, setshowHourlyForecast] = useState(false);
-  // Hourly forecast carousel state
-  const [activeIndex, setactiveIndex] = useState(1);
+  const [showHourlyForecast, setshowHourlyForecast] = useState([false, ""]);
 
   // filter for get actual weather from API
   const filterActualData = ({ location, current }) => {
@@ -40,6 +38,7 @@ const WeatherApp = () => {
         minTemp: days.day.mintemp_c.toFixed(0),
         chanceOfRain: days.day.daily_chance_of_rain,
         maxWind: days.day.maxwind_kph.toFixed(0),
+        hourly: days.hour,
       });
     });
     return daysforecast;
@@ -80,7 +79,11 @@ const WeatherApp = () => {
           showHourlyForecast={showHourlyForecast}
           setshowHourlyForecast={setshowHourlyForecast}
         />
-        <p></p>
+        <HourlyForecast
+          forecasts={forecasts}
+          showHourlyForecast={showHourlyForecast}
+          setshowHourlyForecast={setshowHourlyForecast}
+        />
       </div>
     </main>
   );

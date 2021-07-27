@@ -4,8 +4,9 @@ import HourlyCarusel from "./HourlyCarusel/HourlyCarusel";
 import "./HourlyForecast.scss";
 
 const HourlyForecast = (props) => {
+  const show = props.showHourlyForecast[0];
   //escape keydown close hourly forecast
-  useEffect(() => {
+  useEffect((props) => {
     document.addEventListener("keydown", (event) => {
       if (event.keyCode === 27) {
         props.setshowHourlyForecast(false);
@@ -13,7 +14,7 @@ const HourlyForecast = (props) => {
     });
   }, []);
 
-  if (!props.show) {
+  if (!show) {
     return null;
   } else {
     return ReactDOM.createPortal(
@@ -21,8 +22,11 @@ const HourlyForecast = (props) => {
         className="hourly-forecast"
         onClick={() => props.setshowHourlyForecast(false)}
       >
-        <button onClick={() => props.setshowHourlyForecast(false)}>
-          close
+        <button
+          className="close-btn"
+          onClick={() => props.setshowHourlyForecast(false)}
+        >
+          x
         </button>
         <div
           className="modal-content"
@@ -30,7 +34,10 @@ const HourlyForecast = (props) => {
             event.stopPropagation();
           }}
         >
-          <HourlyCarusel />
+          <HourlyCarusel
+            forecast={props.forecasts}
+            showHourlyForecast={props.showHourlyForecast}
+          />
         </div>
       </div>,
       document.getElementById("portal")

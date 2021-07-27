@@ -4,10 +4,18 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-black-transparent);
+  background-color: var(--color-black-transparent2);
   color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
+  .modal-content {
+    // background-color: var(--color-black-transparent2);
+  }
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
