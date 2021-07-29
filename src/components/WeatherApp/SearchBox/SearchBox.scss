@@ -1,0 +1,18 @@
+.search-box {
+  input {
+    background-color: var(--color-black-transparent);
+    border-radius: 9px;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    padding: 0.5rem;
+    max-width: 100%;
+
+    &::placeholder {
+      color: var(--color-white);
+    }
+    &:focus-visible {
+      outline: none;
+      border: 2px solid var(--color-white);
+    }
+  }
+}

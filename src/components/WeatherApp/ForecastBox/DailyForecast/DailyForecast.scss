@@ -17,4 +17,13 @@
     width: 12%;
     margin-right: 0.4rem;
   }
+  button {
+    margin-top: 1rem;
+    padding: 0.4rem;
+    background-color: transparent;
+    border-radius: 9px;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    font-size: clamp(1em, 1.9vw, 1.5em);
+  }
 }
