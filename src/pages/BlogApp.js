@@ -5,6 +5,7 @@ const BlogApp = () => {
     <main>
       <div className="container">
         <h1>Blog</h1>
+        <p>Coming soon...</p>
       </div>
     </main>
   );

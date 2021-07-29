@@ -5,6 +5,7 @@ const SocialApp = () => {
     <main>
       <div className="container">
         <h1>Social network</h1>
+        <p>Coming soon...</p>
       </div>
     </main>
   );

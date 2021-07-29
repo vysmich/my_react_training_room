@@ -5,6 +5,7 @@ const SpotifyApp = () => {
     <main>
       <div className="container">
         <h1>Spotify</h1>
+        <p>Coming soon...</p>
       </div>
     </main>
   );

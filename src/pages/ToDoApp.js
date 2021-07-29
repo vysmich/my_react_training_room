@@ -5,6 +5,7 @@ const TrainingRoom = () => {
     <main>
       <div className="container">
         <h1>To do</h1>
+        <p>Coming soon...</p>
       </div>
     </main>
   );

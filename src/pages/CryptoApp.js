@@ -5,6 +5,7 @@ const CryptoApp = () => {
     <main>
       <div className="container">
         <h1>Cryptocurency rates</h1>
+        <p>Coming soon...</p>
       </div>
     </main>
   );

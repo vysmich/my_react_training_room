@@ -5,6 +5,7 @@ const EshopApp = () => {
     <main>
       <div className="container">
         <h1>Eshop</h1>
+        <p>Coming soon...</p>
       </div>
     </main>
   );

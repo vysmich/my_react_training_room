@@ -5,6 +5,7 @@ const DasboardApp = () => {
     <main>
       <div className="container">
         <h1>Dashboard</h1>
+        <p>Coming soon...</p>
       </div>
     </main>
   );
