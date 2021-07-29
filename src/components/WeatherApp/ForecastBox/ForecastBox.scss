@@ -4,12 +4,21 @@
   align-items: stretch;
   justify-content: center;
   width: 100%;
+  transform: scale(0.8);
   li:nth-child(2) {
-    margin: 0 2rem;
+    margin: 0 0.5rem;
   }
 
   padding: 0;
   li {
     list-style: none;
+  }
+}
+@media (min-width: 576px) {
+  .forecast-box {
+    transform: scale(1);
+    li:nth-child(2) {
+      margin: 0 2rem;
+    }
   }
 }
